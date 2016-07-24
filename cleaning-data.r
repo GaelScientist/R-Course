@@ -45,3 +45,15 @@ hist(bmi$Y2008)
 
 # Scatter plot comparing BMIs from 1980 to those from 2008
 plot(bmi$Y1980, bmi$Y2008)
+
+# Apply gather() to bmi and save the result as bmi_long
+bmi_long <- gather(bmi, year, bmi_val, -Country)
+
+# View the first 20 rows of the result
+head(bmi_long, n = 20)
+
+# Apply spread() to bmi_long
+bmi_wide <- spread(bmi_long, year, bmi_val)
+
+# View the head of bmi_wide
+head(bmi_wide)
