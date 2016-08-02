@@ -139,3 +139,12 @@ str_trim(c("   Filip ", "Nick  ", " Jonathan"))
 
 # Pad these strings with leading zeros
 str_pad(c("23485W", "8823453Q", "994Z") , width = 9, side = "left", pad = "0")
+
+# Print state abbreviations
+states
+
+# Make states all uppercase and save result to states_upper
+states_upper <- toupper(states)
+
+# Make states_upper all lowercase again
+tolower(states_upper)
