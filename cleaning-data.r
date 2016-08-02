@@ -148,3 +148,20 @@ states_upper <- toupper(states)
 
 # Make states_upper all lowercase again
 tolower(states_upper)
+
+## stringr has been loaded for you
+
+# Look at the head of students2
+head(students2)
+
+# Detect all dates of birth (dob) in 1997
+str_detect(students2$dob, "1997")
+
+# In the sex column, replace "F" with "Female"...
+students2$sex <- str_replace(students2$sex, "F","Female")
+
+# ...And "M" with "Male"
+students2$sex <- str_replace(students2$sex, "M","Male")
+
+# View the head of students2
+head(students2)
