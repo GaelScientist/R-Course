@@ -165,3 +165,17 @@ students2$sex <- str_replace(students2$sex, "M","Male")
 
 # View the head of students2
 head(students2)
+
+## The stringr package is preloaded
+
+# Use str_replace() to replace all missing strings in status with NA
+social_df$status <- str_replace(social_df$status, "^$", NA)
+
+# Print social_df to the console
+social_df
+
+# Use complete.cases() to see which rows have no missing values
+complete.cases(social_df)
+
+# Use na.omit() to remove all rows with any missing values
+na.omit(social_df)
